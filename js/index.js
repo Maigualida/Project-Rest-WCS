@@ -28,55 +28,42 @@ $(document).ready(function () {
 
     //Geolocalisation
     //Si el navegador tiene geolocalizacion
+
+
+
     if (navigator.geolocation) {
 
         var long = "";
         var lat = "";
 
-        //Obtiene las coordenadas
-        navigator.geolocation.getCurrentPosition(function (position) {
-            long = position.coords.longitude;
-            lat = position.coords.latitude;
 
-            //agrega las coordenadas al API
-            var api = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + lat + ',' + long + '&key=%20AIzaSyC9QJ4CgB2AOSuIOdsqwom-lIPx893U8H8'
 
-            //Obtiene el objeto a partir de la API dada
-            $.getJSON(api, function (data) {
-                let nomVille = data.results[0].address_components[2].long_name; // Agrega el nombre de la ciudad al HTML
+        $('#geolocalisation').click(function () {
+            //Obtiene las coordenadas
+            navigator.geolocation.getCurrentPosition(function (position) {
+                long = position.coords.longitude;
+                lat = position.coords.latitude;
 
-                let nomVilles = ['Lyon', 'Bordeaux', 'Toulouse', 'La Loupe', ''];
+                //agrega las coordenadas al API
+                var api = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + lat + ',' + long + '&key=%20AIzaSyC9QJ4CgB2AOSuIOdsqwom-lIPx893U8H8'
 
-                if (nomVilles.includes(nomVille)) {
-                    $("#city").html('"Les Restaurants atypiques" de ' + nomVille + '<br> vous souhaitent la bienvenue ');
-                }
+                //Obtiene el objeto a partir de la API dada
+                $.getJSON(api, function (data) {
+                    let nomVille = data.results[0].address_components[2].long_name; // Agrega el nombre de la ciudad al HTML
+
+                    let nomVilles = ['Lyon', 'Bordeaux', 'Toulouse', 'La Loupe', ''];
+
+                    if (nomVilles.includes(nomVille)) {
+                        $("#city").html('"Les Restaurants atypiques" de ' + nomVille + '<br> vous souhaitent la bienvenue ');
+                    }
+                });
             });
+            //} else {
+            //  $('#city').html('Nous n\'avons pas réussi à vous trouver' ou phrase pour devenir franchisé);
         });
-        //} else {
-        //  $('#city').html('Nous n\'avons pas réussi à vous trouver' ou phrase pour devenir franchisé);
     };
 
 
-    var long = "";
-    var lat = "";
-    //Obtiene las coordenadas
-    navigator.geolocation.getCurrentPosition(function (position) {
-        long = position.coords.longitude;
-        lat = position.coords.latitude;
-        //agrega las coordenadas al API
-        var api = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + lat + ',' + long + '&key=%20AIzaSyC9QJ4CgB2AOSuIOdsqwom-lIPx893U8H8'
-        //Obtiene el objeto a partir de la API dada
-        $.getJSON(api, function (data) {
-            let nomVille = data.results[0].address_components[2].long_name; // Agrega el nombre de la ciudad al HTML
-            let nomVilles = ['Lyon', 'Bordeaux', 'Toulouse', 'La Loupe', 'Fontainebleau', ''];
-            if (nomVilles.includes(nomVille)) {
-                $("#city").html('"Les Restaurants atypiques" de ' + nomVille + '<br>vous souhaitent la bienvenue ');
-            }
-        });
-    });
-    //} else {
-    //  $('#city').html('Nous n\'avons pas réussi à vous trouver' ou phrase pour devenir franchisé);
-    //}
     // modal popUp restaurants section
     $('#myModal').on('shown.bs.modal', function () {
         $('#myInput').focus()
