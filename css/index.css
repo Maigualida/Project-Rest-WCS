@@ -2,23 +2,21 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100');
 
 
-html, body{
+/*html, body{
   width: 100%;
   height: 100%;
-}
+}*/
 
 header {
   text-align: center;
   color: #333;
   /*text-shadow: 0 0 0.2em black, 0 0 0.2em black;*/
-  background-image: url('../images/egg.png');
+  background-image: url('../images/header-hor.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  /*background-attachment: fixed;*/
-  background-size: 100%;
-  height: 100%;
-  min-height: auto;
+  background-attachment: fixed;
+  height: 100vh;
 }
 
 #nav-style{
@@ -38,26 +36,23 @@ header {
   margin-left: 8px;
 }
 
-.intro-heading{
-  font-size: 4em;
-  padding-top: 2em;
-  padding-bottom: 4em;
-  margin-bottom: 1em;
-}
 /*text heading*/
+
+.intro-heading{
+  font-size: 3em;
+  padding-top: 1.8em;
+  padding-bottom: 2em;
+
+}
 #city{
  font-family: 'Didact Gothic', sans-serif;
 }
 
 #accroche{
-  font-size: 2.5em;  
+  font-size: 2em;  
   font-family: 'Roboto', sans-serif;
   color: black;
 
-}
-
-#geolocalisation{
-  font-size: 10px;
 }
 
 /*titulos de cada seccion*/
@@ -65,9 +60,11 @@ header {
   font-family: 'Dosis', sans-serif;
   text-align: center;
 }
+
 #photos{
   height: 100%;
 }
+
 p{
   text-align: justify;
   font-family: 'Dosis', sans-serif;
@@ -96,20 +93,13 @@ h2{
 }
 
 #reserve{
-    height: 100%;
-    display: flex;
+    height: 100vh;
+    width: auto;
+    display:inline-block;
     justify-content: center;
     align-items: center;
     background-size: cover;
     background-image: url('https://images.pexels.com/photos/106877/pexels-photo-106877.jpeg?w=940&h=650&auto=compress&cs=tinysrgb')
-}
-#presentacion{
-  height: 100%;
-}
-
-#cont-pre{
-display: flex;
-justify-content: space-around;
 }
 
 /*#cont-pre{
@@ -120,15 +110,7 @@ justify-content: space-around;
   width: 70%;
   height: 70%;
 }*/
-#text-p{
-  text-align: justify;
-  padding: 30px;
-  width: 50%;
-}
 
-#text-equipe{
-  padding: 30px;
-}
 
 #footer-id{
   background-color: black;

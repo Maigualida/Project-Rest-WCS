@@ -68,24 +68,24 @@
     </div>
     <!-- /.container-fluid -->
   </nav>
+
+
+  <!--HEADER-->
   <header>
-    <div class="container">
-      <div id="main-header">
-
-        <div id="city" class="intro-heading"> Le Rendez-vous Atypique</div>
-        <div id="accroche">Retrouvez un restaurant prez de chez vous!</div>
-        <div id="geolocalisation"><a href="#" class="btn btn-success btn-lg">Localisez moi!</a>
-
+    <div class="container" id="main-header">
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="city" class="intro-heading"> Le Rendez-vous Atypique</div>
+          <div id="accroche">Retrouvez un restaurant prez de chez vous!</div>
+          <div id="geolocalisation"><a href="#" class="btn btn-success btn-lg">Localisez moi!</a></div>
         </div>
       </div>
-
+    </div>
   </header>
 
 
   <!--Presentacion-->
-  <div id="Presentacion">
-    <h1 id="text-equipe" class="tit-sec">Équipe</h1>
-    <!--<div id="cont-pre">
+  <!-- <div id="cont-pre">
       <div class="row">
         <div class="col-xs-6">
           <p id="text-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -102,22 +102,23 @@
         </div>
       </div>
   </div>-->
-    <div id="cont-pre">
-      <div>
+  <div id="Presentacion">
+    <h1 id="text-equipe" class="tit-sec">Équipe</h1>
+    <div class="row">
+      <div id="cont-pre" class="col-xs-12 col-md-6">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+          sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+          aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+          occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
-      <p id="text-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
-        dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-        enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <div>
+      <div class="hidden-xs col-md-5">
         <img id="paltas" src="http://i.giphy.com/l2JHRhAtnJSDNJ2py.gif">
       </div>
     </div>
-
   </div>
   <!--end presentacion-->
 
@@ -198,97 +199,97 @@
 
   <!--Section Resevez vous-->
   <div id="reserve">
-    <div id="form-reserve">
-      <h1 class="tit-sec">LOREM IPSUM</h1>
-      <form class="form-inline">
-        <div class="form-group">
-          <!--Start Dropdown-->
-          <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+    <div id="form-reserve" class="row">
+      <div class="col-xs-12">
+        <h1 class="tit-sec">LOREM IPSUM</h1>
+        <form class="form-inline">
+          <div class="form-group">
+            <!--Start Dropdown-->
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
             restaurants
             <span class="caret"></span>
             </button>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">La Loup</a></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Toulouse</a></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Orleans</a></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Lyon</a></li>
-            </ul>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">La Loup</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Toulouse</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Orleans</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Lyon</a></li>
+              </ul>
+            </div>
+            <!--end Dropdown-->
+
           </div>
-          <!--end Dropdown-->
+          <div class="form-group">
+            <label for="exampleInputEmail2">Hour</label>
+            <input type="text" class="form-control" id="exampleInputEmail2" placeholder="12:00">
+          </div>
+          <p>Message</p>
+          <div>
+            <textarea id="text-area" class="form-control" rows="3"></textarea>
+          </div>
+          <button type="button" class="btn btn-default">Send</button>
 
-        </div>
-        <div class="form-group">
-          <label for="exampleInputEmail2">Hour</label>
-          <input type="text" class="form-control" id="exampleInputEmail2" placeholder="12:00">
-        </div>
-        <p>Message
-
-        </p>
-        <div>
-          <textarea id="text-area" class="form-control" rows="3"></textarea>
-        </div>
-        <button type="button" class="btn btn-default">Send</button>
-
-      </form>
+        </form>
+      </div>
     </div>
   </div>
-  <div>
+  </div>
 
-
-    <footer>
-      <div id="footer-id">
-        <div class="row">
-          <div class="col-xs-12 col-md-4">
-            <ul>
-              <h4>Map du site</h4>
-              <a>
-                <li>Home</li>
-              </a>
-              <a>
-                <li>Équipe</li>
-              </a>
-              <a>
-                <li>Restaurants</li>
-              </a>
-              <a>
-                <li>Reservez</li>
-              </a>
-              <a>
-                <li>Mentions legales</li>
-              </a>
-              <a>
-                <li>Contact</li>
-              </a>
-            </ul>
-          </div>
-          <div class="col-xs-12 col-md-4">
-            <h4>Où nous trouver</h4>
-            <p>Adresse: 17 Rue Delandine, 69002 Lyon</p>
-            <p>Mobile: 55555555555555555</p>
-            <p>Telephone: 55555555555555555</p>
-            <p> Mail: qwerty@jajs.com</p>
-          </div>
-          <div class="col-xs-12 col-md-4">
-            <h4>Comentaires</h4>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua. Ut enim ad minim veniam" Moma Nina</p>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua. Ut enim ad minim veniam" Nana Cala</p>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua. Ut enim ad minim veniam" Tito Lolo</p>
-          </div>
+  <!--FOOTER-->
+  <footer>
+    <div id="footer-id">
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <ul>
+            <h4>Map du site</h4>
+            <a>
+              <li>Home</li>
+            </a>
+            <a>
+              <li>Équipe</li>
+            </a>
+            <a>
+              <li>Restaurants</li>
+            </a>
+            <a>
+              <li>Reservez</li>
+            </a>
+            <a>
+              <li>Mentions legales</li>
+            </a>
+            <a>
+              <li>Contact</li>
+            </a>
+          </ul>
         </div>
-        <div class="text-center">&copy; Copyright Restaurants Atypiques</div>
+        <div class="col-xs-12 col-md-4">
+          <h4>Où nous trouver</h4>
+          <p>Adresse: 17 Rue Delandine, 69002 Lyon</p>
+          <p>Mobile: 55555555555555555</p>
+          <p>Telephone: 55555555555555555</p>
+          <p> Mail: qwerty@jajs.com</p>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <h4>Comentaires</h4>
+          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam" Moma Nina</p>
+          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam" Nana Cala</p>
+          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam" Tito Lolo</p>
+        </div>
       </div>
+      <div class="text-center">&copy; Copyright Restaurants Atypiques</div>
+    </div>
 
-    </footer>
+  </footer>
 
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="js/index.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/index.js"></script>
 
 
 </body>
